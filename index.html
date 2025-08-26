@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Control de Gastos</title>
+  <link rel="stylesheet" href="styles.css"> <!-- CSS externo -->
+</head>
+<body>
+  <h1>📊 Control de Gastos</h1>
+  <div class="contenedor">
+    <div class="input-group">
+      <label>Descripción</label>
+      <input type="text" id="descripcion" placeholder="Ej: Supermercado">
+    </div>
+    <div class="input-group">
+      <label>Monto</label>
+      <input type="number" id="monto" placeholder="Ej: 5000">
+    </div>
+    <div class="input-group">
+      <label>Tipo</label>
+      <select id="tipo">
+        <option value="ingreso">Ingreso</option>
+        <option value="gasto">Gasto</option>
+      </select>
+    </div>
+    <button onclick="agregarMovimiento()">Agregar</button>
+
+    <div class="resultado">
+      <h3>Movimientos</h3>
+      <ul id="lista"></ul>
+      <p><strong>Total Ingresos:</strong> $<span id="totalIngresos">0</span></p>
+      <p><strong>Total Gastos:</strong> $<span id="totalGastos">0</span></p>
+      <p><strong>Saldo:</strong> $<span id="saldo">0</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- JS externo -->
+</body>
+</html>
